@@ -38,7 +38,7 @@
 ### How to run
 1. Running the code in terminal will first ask the grid size which the player can enter. If no size is entered, a default size of 5 is chosen. A winning score is asked to the player which is to be entered as a power of 2(*eg. For 32 score, 5 should be entered*). A default 2048 score is chosen if nothing is chosen.
 
-![Size and Score](https://drive.google.com/file/d/1aeQ-VvZWhfesTkvP2YFtxogSCBH1uQwS/view?usp=sharing)
+![Size and Score](https://mail.google.com/mail/u/0?ui=2&ik=8dff92e035&attid=0.1&permmsgid=msg-a:r2678587204747327740&th=17226f026e24b7da&view=att&disp=safe&realattid=f_kac8m2yv0)
 
 2. Random 2 will appear at any tile on the grid. The user needs W,A,S,D keys to move these tiles while colliding with other tiles to make a greater number.
 
