@@ -38,15 +38,16 @@
 ### How to run
 1. Running the code in terminal will first ask the grid size which the player can enter. If no size is entered, a default size of 5 is chosen. A winning score is asked to the player which is to be entered as a power of 2(*eg. For 32 score, 5 should be entered*). A default 2048 score is chosen if nothing is chosen.
 
-![Size and Score](https://mail.google.com/mail/u/0?ui=2&ik=8dff92e035&attid=0.1&permmsgid=msg-a:r2678587204747327740&th=17226f026e24b7da&view=att&disp=safe&realattid=f_kac8m2yv0)
+![Size and Score](2048%20SS/SS2.PNG)
 
 2. Random 2 will appear at any tile on the grid. The user needs W,A,S,D keys to move these tiles while colliding with other tiles to make a greater number.
 
-![Grid display](https://drive.google.com/file/d/1eQ2uHlKPjeVyw5Ah5S9wzYGobKsUfRjA/view?usp=sharing)
+![Grid display](2048%20SS/SS3.PNG)
 
 3. Player can press p instead of W,A,S,D keys to end the game in the middle without winning or losing.
 4. If winning score is reached the player wins the game else if the grid is full with no movement left, the player lose.
-![Win Display](https://drive.google.com/file/d/1zLQqrfkmlBNDP_O9OuTBhiiEnmwMp_kr/view?usp=sharing)
+
+![Win Display](2048%20SS/SS4.PNG)
 
 
 ## Built with
