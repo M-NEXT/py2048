@@ -54,3 +54,7 @@
 
 * Python (programming language)
 * Jupyter notebook 
+
+
+## Platform
+* Windows
