@@ -9,7 +9,7 @@ import os
 
 # In[2]:
 
-
+'''Place 2's on random empty tiles'''
 def new_2_number(matrix,n):
     while True:
         move = random.randint(1,n**2)
@@ -24,7 +24,7 @@ def new_2_number(matrix,n):
 
 # In[3]:
 
-
+'''Display Grid without any distortion'''
 def display_grid(matrix):
     bdigit = max_dig(matrix)
     for i in matrix:
@@ -50,7 +50,7 @@ def display_grid(matrix):
 
 # In[4]:
 
-
+'''Finds the no. of digit in the biggest number in the grid for display purposes'''
 def max_dig(matrix):
     bignum = 0
     for rows in matrix:
@@ -68,7 +68,7 @@ def max_dig(matrix):
 
 # In[5]:
 
-
+'''Rearranges the grid after player moves'''
 def rearrange(matrix, Player_Move):
     if Player_Move == b'a' or Player_Move == b'd':
         
@@ -115,7 +115,7 @@ def rearrange(matrix, Player_Move):
 
 # In[6]:
 
-
+'''Same number of tiles collides, then this function adds them'''
 def add_num(matrix):
         for rnum, row in enumerate(matrix):
             store = False
@@ -136,7 +136,7 @@ def add_num(matrix):
 
 # In[7]:
 
-
+'''check if player lost'''
 def lose(matrix , n):
     moves = (b'w',b'a',b's',b'd')
     
@@ -150,7 +150,7 @@ def lose(matrix , n):
 
 # In[8]:
 
-
+'''makes a copy of Grid'''
 def copy(matrix , n):
     copy_matrix = []
     for i in range(n):
@@ -167,7 +167,7 @@ def copy(matrix , n):
 
 # In[9]:
 
-
+'''Takes size of grid'''
 def grid_detail():
     n = input('Enter size of grid : ')
     if n == '':
@@ -188,7 +188,7 @@ def grid_detail():
 
 # In[10]:
 
-
+'''Takes win score'''
 def win_score():
     score = input('Enter winning score as ""nth"" power of two : ')
     if score == '':
@@ -209,7 +209,7 @@ def win_score():
 
 # In[11]:
 
-
+'''check if player wins'''
 def win(matrix , score):
     for rows in matrix:
         for cols in rows:
@@ -220,7 +220,7 @@ def win(matrix , score):
 
 # In[12]:
 
-
+'''main function where the game main structure is developed'''
 def main():
     n = grid_detail()
     if not n:
