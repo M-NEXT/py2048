@@ -2,8 +2,7 @@
 # coding: utf-8
 
 # In[1]:
-
-import getch
+import msvcrt
 import random
 import os
 
@@ -71,9 +70,9 @@ def max_dig(matrix):
 
 
 def rearrange(matrix, Player_Move):
-    if Player_Move == 'a' or Player_Move == 'd':
+    if Player_Move == b'a' or Player_Move == b'd':
         
-        if Player_Move == 'd':
+        if Player_Move == b'd':
             for rnum, row in enumerate(matrix):
                 matrix[rnum] = list(reversed(row))
         matrix  = add_num(matrix)
@@ -86,12 +85,12 @@ def rearrange(matrix, Player_Move):
                 elif col != 0 and temp != 0:
                     matrix[rnum][cnum-temp] = matrix[rnum][cnum]
                     matrix[rnum][cnum] = 0         
-        if Player_Move == 'd':
+        if Player_Move == b'd':
             for rnum, row in enumerate(matrix):
                 matrix[rnum] = list(reversed(row))
         return matrix
                     
-    elif Player_Move == 'w' or Player_Move == 's':
+    elif Player_Move == b'w' or Player_Move == b's':
         
         transform = []
         for i in range(len(matrix)):
@@ -102,10 +101,10 @@ def rearrange(matrix, Player_Move):
             for row in matrix:
                 transform[column] = transform[column] + [row[column]]
         
-        if Player_Move == 'w':
-            transform = rearrange(transform, 'a')
+        if Player_Move == b'w':
+            transform = rearrange(transform, b'a')
         else:
-            transform = rearrange(transform, 'd')
+            transform = rearrange(transform, b'd')
         for column in range(len(matrix)):
             for rnum, row in enumerate(matrix):
                 row[column] = transform[column][rnum]
@@ -139,7 +138,7 @@ def add_num(matrix):
 
 
 def lose(matrix , n):
-    moves = ('w','a','s','d')
+    moves = (b'w',b'a',b's',b'd')
     
     for move in moves:
         test_matrix = copy(matrix , n)
@@ -244,6 +243,9 @@ def main():
     display_grid(matrix)
     
     while True:
+
+        print('Grid size :',n,'     ','Winning score :',score)
+        
         check = win(matrix , score)
         if check:
             print('You won')
@@ -254,8 +256,9 @@ def main():
             break
     
         copy_matrix = copy(matrix , n)
-        inp = getch.getch('Enter your move or enter p to end the game: ')
-        if inp == 'p':
+        print('Enter your move or press p to exit')
+        inp = msvcrt.getch()
+        if inp == b'p' or inp == b'P':
             print('Game ended')
             break
         rearrange(matrix , inp)
@@ -277,10 +280,3 @@ def main():
 final = main()
 if final:
     print('\nExecute the code again to play 2048 game')
-
-
-# In[ ]:
-
-
-
-
